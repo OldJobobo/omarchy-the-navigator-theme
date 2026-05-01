@@ -909,7 +909,7 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
 /* Forum / thread posts — consistent card treatment */
 :is(
     [class*="forumPostMessage"],
-    [class*="forumPost"]
+    [class*="forumPost"]:not([class*="forumPostControls"])
 ) {
     background: var(--bg-2) !important;
     border: 1px solid var(--border) !important;
@@ -918,7 +918,7 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
 
 :is(
     [class*="forumPostMessage"],
-    [class*="forumPost"]
+    [class*="forumPost"]:not([class*="forumPostControls"])
 ):hover {
     background: var(--hover) !important;
     border-color: rgba(209, 177, 135, 0.22) !important;
