@@ -1,0 +1,70 @@
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#232220"
+
+# Main text color
+theme[main_fg]="#a9a49f"
+
+# Title color for boxes
+theme[title]="#d1b187"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#d8c85a"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#3b3936"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#cac5be"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#5c5a57"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#b08c52"
+
+# Box outlines — distinct hue per box for at-a-glance orientation
+theme[cpu_box]="#cb704f"
+theme[mem_box]="#bfaa48"
+theme[net_box]="#61928b"
+theme[proc_box]="#d1b187"
+theme[div_line]="#3b3936"
+
+# Temperature gradient: cool teal → warm yellow → hot orange-red
+theme[temp_start]="#61928b"
+theme[temp_mid]="#bfaa48"
+theme[temp_end]="#cb704f"
+
+# CPU gradient: calm → warm → hot
+theme[cpu_start]="#61928b"
+theme[cpu_mid]="#bfaa48"
+theme[cpu_end]="#cb704f"
+
+# Memory: free (good — olive/green)
+theme[free_start]="#8a8d4c"
+theme[free_mid]="#909048"
+theme[free_end]="#d8c85a"
+
+# Memory: cached (neutral — teal)
+theme[cached_start]="#61928b"
+theme[cached_mid]="#608e8a"
+theme[cached_end]="#8aacaa"
+
+# Memory: available (positive — yellow)
+theme[available_start]="#bfaa48"
+theme[available_mid]="#d8c85a"
+theme[available_end]="#e0c99e"
+
+# Memory: used (concerning — warm to hot)
+theme[used_start]="#d1b187"
+theme[used_mid]="#c27c52"
+theme[used_end]="#c87252"
+
+# Network: download (cool/teal)
+theme[download_start]="#61928b"
+theme[download_mid]="#608e8a"
+theme[download_end]="#8aacaa"
+
+# Network: upload (warm/amber)
+theme[upload_start]="#bfaa48"
+theme[upload_mid]="#b08c52"
+theme[upload_end]="#c87252"

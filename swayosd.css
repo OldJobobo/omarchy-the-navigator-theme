@@ -1,0 +1,117 @@
+@define-color background-color #232220;
+@define-color panel #1c1b19;
+@define-color instrument #141312;
+@define-color border-color #5c5a57;
+@define-color bevel-light rgba(209, 177, 135, 0.42);
+@define-color bevel-mid rgba(209, 177, 135, 0.18);
+@define-color bevel-shadow rgba(0, 0, 0, 0.5);
+@define-color label #d1b187;
+@define-color image #d1b187;
+@define-color progress #8aacaa;
+
+window:not(:backdrop),
+window:backdrop {
+    border: none;
+    border-width: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 16px;
+}
+
+window:not(:backdrop) #container,
+window:backdrop #container {
+    background: @panel;
+    border-top: 1px solid @bevel-light;
+    border-left: 1px solid rgba(209, 177, 135, 0.28);
+    border-right: 1px solid rgba(93, 63, 34, 0.36);
+    border-bottom: 1px solid rgba(93, 63, 34, 0.42);
+    border-radius: 0;
+    padding: 16px 24px;
+    min-width: 288px;
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.62),
+        0 1px 0 rgba(209, 177, 135, 0.12),
+        inset 0 1px 0 rgba(209, 177, 135, 0.16),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+        inset 10px 0 18px rgba(0, 0, 0, 0.12),
+        inset -10px 0 18px rgba(0, 0, 0, 0.12);
+}
+
+window:not(:backdrop) image,
+window:backdrop image {
+    color: @image;
+    -gtk-icon-size: 20px;
+    margin: 0 16px 0 0;
+    opacity: 0.92;
+}
+
+window:not(:backdrop) label,
+window:backdrop label {
+    color: @label;
+    font-family: "BlexMono Nerd Font", monospace;
+    font-size: 14px;
+    margin: 0 0 0 16px;
+    opacity: 0.92;
+}
+
+window:not(:backdrop) progressbar,
+window:backdrop progressbar {
+    color: @grogress;
+    min-width: 176px;
+    min-height: 16px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+window:not(:backdrop) progressbar trough,
+window:backdrop progressbar trough {
+    background: @instrument;
+    border-radius: 0;
+    min-height: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.9);
+    border-left: 1px solid rgba(0, 0, 0, 0.82);
+    border-right: 1px solid rgba(209, 177, 135, 0.14);
+    border-bottom: 1px solid rgba(209, 177, 135, 0.28);
+    box-shadow:
+        inset 0 2px 3px rgba(0, 0, 0, 0.82),
+        inset 0 -1px 0 rgba(209, 177, 135, 0.18);
+}
+
+window:not(:backdrop) progressbar progress,
+window:backdrop progressbar progress {
+    background: @progress;
+    border-radius: 0;
+    min-height: 14px;
+    border-top: 1px solid rgba(255, 236, 196, 0.34);
+    border-right: 1px solid rgba(255, 236, 196, 0.2);
+    border-bottom: 1px solid rgba(93, 63, 34, 0.24);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 236, 196, 0.28),
+        inset 0 -1px 0 rgba(93, 63, 34, 0.18);
+}
+
+progressbar,
+trough {
+    min-height: 14px;
+    border-radius: 0;
+}
+
+trough {
+    min-height: 14px;
+    padding: 0;
+    box-shadow:
+        inset 0 2px 3px rgba(0, 0, 0, 0.82),
+        inset 0 -1px 0 rgba(209, 177, 135, 0.18);
+}
+
+progress {
+    min-height: 14px;
+    border-radius: 0;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 236, 196, 0.28),
+        inset 0 -1px 0 rgba(93, 63, 34, 0.18);
+}

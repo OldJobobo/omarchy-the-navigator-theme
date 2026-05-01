@@ -1,0 +1,29 @@
+scheme: "The Navigator"
+author: "OldJobobo (based on Lost Century by https://lospec.com/surrealember)"
+
+base00: "232220" # default background
+base01: "2e2c2a" # lighter background
+base02: "3b3936" # selection background
+base03: "5c5a57" # comments / muted text
+base04: "8c8884" # dark foreground
+base05: "a9a49f" # default foreground
+base06: "cac5be" # light foreground
+base07: "8aacaa" # brightest foreground / cool pale accent
+
+base08: "cb704f" # red / error
+base09: "c27c52" # orange / warning
+base0A: "bfaa48" # yellow
+base0B: "8a8d4c" # green / olive
+base0C: "61928b" # cyan / teal
+base0D: "d1b187" # blue / primary accent
+base0E: "b08c52" # purple / secondary accent
+base0F: "a28453" # brown / deprecated
+
+base10: "1d1c1a" # darker background
+base11: "141312" # darkest background
+base12: "c87252" # bright red
+base13: "d8c85a" # bright yellow
+base14: "909048" # bright green
+base15: "608e8a" # bright cyan
+base16: "e0c99e" # bright blue / warm light accent
+base17: "c9a464" # bright purple / warm secondary accent
