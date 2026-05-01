@@ -198,9 +198,9 @@ rounding = 0
 - If blur must be present: `size = 4, passes = 1` — barely present, purely atmospheric.
 
 **Shadow:**
-- Subtle, warm-dark. For window separation on busy wallpaper detail, not for drama.
-- `col.shadow = rgba(35, 34, 32, 0.7)` — same hue family as background
-- `range = 10, power = 2` — narrow, close to the edge
+- Warm-dark and clearly visible. It should separate windows from dense map detail, especially at lower resolutions, without reading as a glow.
+- `color = rgba(20, 19, 18, 0.87)` / `color_inactive = rgba(20, 19, 18, 0.60)` — same hue family as the instrument surface
+- `range = 18, render_power = 3` — wider and denser than the original tight shadow, still close to the window edge
 
 
 ### Hyprlock
