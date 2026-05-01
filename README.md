@@ -1,6 +1,6 @@
 # Omarchy The Navigator Theme
 
-The Navigator is an Omarchy theme built around a WWII-era air map of the world: warm terracotta land, slate-blue oceans, parchment route lines, and the hard geometry of a polar projection. It turns the desktop into an operations room surface: dark map ink, field-stone text, brass-toned accents, tight spacing, sharp corners, and no glow.
+The Navigator is an Omarchy theme built around a set of old maps of the world: warm terracotta land, slate-blue oceans, parchment route lines, and the hard geometry of a polar projection. It turns the desktop into an operations room surface: dark map ink, field-stone text, brass-toned accents, tight spacing, sharp corners, and no glow.
 
 ## Preview
 
