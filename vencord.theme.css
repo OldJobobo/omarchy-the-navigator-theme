@@ -905,6 +905,31 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     color: var(--nav-olive) !important;
 }
 
+/* Voice stream view — keep idle participant/gradient overlays from covering shared video */
+.callContainer_cb9592,
+.callContainer__722ff,
+[class*="callContainer"] {
+    --bg-overlay-1: rgba(20, 19, 18, 0.28);
+    --bg-overlay-2: rgba(15, 14, 13, 0.36);
+    --bg-overlay-3: rgba(10, 9, 8, 0.44);
+}
+
+:is(
+    .callContainer_cb9592,
+    .callContainer__722ff,
+    [class*="callContainer"]
+) :is(
+    .gradientContainer_bfe55a,
+    [class*="gradientContainer"],
+    [class*="tile"],
+    [class*="tileSizer"]
+) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
 
 /* Forum / thread posts — consistent card treatment */
 :is(
