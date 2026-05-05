@@ -978,11 +978,47 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     main,
     section,
     aside
-):not(button):not([role="button"]):not([class*="button"]):not([class*="Button"]):not([class*="control"]):not([class*="Control"]) {
+):not(:is(
+    button,
+    [role="button"],
+    [class*="button"],
+    [class*="Button"],
+    [class*="control"],
+    [class*="Control"],
+    [class*="avatar"],
+    [class*="Avatar"],
+    [class*="icon"],
+    [class*="Icon"],
+    [class*="guild"],
+    [class*="Guild"],
+    [style*="background-image"]
+)) {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
     box-shadow: none !important;
+}
+
+/* Voice call pages still need bitmap-backed identity surfaces. */
+:is(
+    .page_c48ade,
+    .base_c48ade,
+    [class*="page"],
+    [class*="base"]
+):has(:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"])) :is(
+    [class*="avatar"],
+    [class*="Avatar"],
+    [class*="icon"],
+    [class*="Icon"],
+    [class*="guild"],
+    [class*="Guild"],
+    [style*="background-image"],
+    img,
+    svg,
+    foreignObject
+) {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Forum / thread posts — consistent card treatment */
