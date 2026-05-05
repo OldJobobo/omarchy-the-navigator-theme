@@ -259,9 +259,7 @@
     .chatContent_f75fb0,
     .container__133bf,
     .container__9293f,
-    .container__01ae2,
     .content__908e2,
-    .page_c48ade,
     .applicationStore_f07d62,
     .shop__08415,
     .scrollerBase__99f8c
@@ -273,7 +271,6 @@
     [class*="container"][class*="themed"],
     [class*="contentRegion"],
     [class*="sidebarRegion"],
-    [class*="page"],
     [class*="chatContent"],
     [class*="nowPlayingColumn"],
     [class*="membersWrap"],
@@ -905,23 +902,16 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     color: var(--nav-olive) !important;
 }
 
-/* Voice stream view — keep idle participant/gradient overlays from covering shared video */
+/* Voice stream view — keep Discord chrome from painting over shared video */
 .callContainer_cb9592,
 .callContainer__722ff,
 [class*="callContainer"] {
     --bg-overlay-1: rgba(20, 19, 18, 0.28);
     --bg-overlay-2: rgba(15, 14, 13, 0.36);
     --bg-overlay-3: rgba(10, 9, 8, 0.44);
-    background: var(--bg-3) !important;
-    background-color: var(--bg-3) !important;
-    background-image: none !important;
 }
 
-:is(
-    .callContainer_cb9592,
-    .callContainer__722ff,
-    [class*="callContainer"]
-) :is(
+:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"]) :is(
     .gradientContainer_bfe55a,
     [class*="gradientContainer"]
 ) {
@@ -931,36 +921,69 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     box-shadow: none !important;
 }
 
-:is(
-    .callContainer_cb9592,
-    .callContainer__722ff,
-    [class*="callContainer"]
-) :is(
-    [class*="root"][class*="video"],
-    [class*="wrapper"][class*="video"],
-    [class*="videoControls"],
+:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"]) :is(
+    video,
+    canvas,
+    [class*="media"],
+    [class*="streamPreview"]
+) {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    background: transparent !important;
+}
+
+:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"]) :is(
     [class*="videoGrid"],
     [class*="videoWrapper"],
-    [class*="participants"],
-    [class*="participant"],
     [class*="tileContainer"],
-    [class*="tile"],
-    [class*="tileSizer"]
+    [class*="tileSizer"],
+    [class*="tile"]
 ) {
-    background: var(--bg-3) !important;
-    background-color: var(--bg-3) !important;
+    background: transparent !important;
+    background-color: transparent !important;
     background-image: none !important;
     box-shadow: none !important;
 }
 
 :is(
-    .callContainer_cb9592,
-    .callContainer__722ff,
-    [class*="callContainer"]
-) :is(video, canvas) {
+    .page_c48ade,
+    .base_c48ade,
+    [class*="page"],
+    [class*="base"]
+):has(:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"])) :is(
+    .membersWrap_c8ffbb,
+    .container_c8ffbb,
+    .members_c8ffbb,
+    [class*="membersWrap"],
+    [class*="members"][class*="container"],
+    [class*="members"][class*="scroller"]
+) {
+    display: none !important;
     background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
+:is(
+    .page_c48ade,
+    .base_c48ade,
+    [class*="page"],
+    [class*="base"]
+):has(:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"])) :is(
+    div,
+    main,
+    section,
+    aside
+):not(button):not([role="button"]):not([class*="button"]):not([class*="Button"]):not([class*="control"]):not([class*="Control"]) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
 
 /* Forum / thread posts — consistent card treatment */
 :is(
